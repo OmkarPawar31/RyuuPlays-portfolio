@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/inquiry",
+      "destination": "https://asia-south1-ryuuplays-portfolio.cloudfunctions.net/submitInquiry"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
