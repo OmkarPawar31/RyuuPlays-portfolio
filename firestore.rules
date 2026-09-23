@@ -1,0 +1,14 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Enquiries and email jobs are created only by the trusted Cloud Function.
+    match /inquiries/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /mail/{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
